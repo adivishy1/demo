@@ -1,0 +1,19 @@
+template:
+  name: remote-temp
+  type: Step
+  projectIdentifier: adithyaGitX
+  orgIdentifier: default
+  spec:
+    type: ShellScript
+    spec:
+      shell: Bash
+      onDelegate: true
+      source:
+        type: Inline
+        spec:
+          script: echo 1
+      environmentVariables: []
+      outputVariables: []
+    timeout: 10m
+  identifier: remotetemp
+  versionLabel: v5
