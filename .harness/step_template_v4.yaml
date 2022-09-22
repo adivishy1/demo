@@ -1,0 +1,20 @@
+template:
+  name: step template
+  identifier: step_template
+  versionLabel: v4
+  type: Step
+  projectIdentifier: adithyaGitX
+  orgIdentifier: default
+  tags: {}
+  spec:
+    timeout: 10m
+    type: ShellScript
+    spec:
+      shell: Bash
+      onDelegate: true
+      source:
+        type: Inline
+        spec:
+          script: echo hello
+      environmentVariables: []
+      outputVariables: []
