@@ -15,6 +15,6 @@ template:
       source:
         type: Inline
         spec:
-          script: zxcz
+          script: zxczdfsgsdf
       environmentVariables: []
       outputVariables: []
