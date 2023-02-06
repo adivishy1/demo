@@ -24,3 +24,9 @@ template:
                   disallowPipelineExecutor: false
                   userGroups: <+input>
                 approverInputs: []
+          - step:
+              name: as
+              identifier: as
+              template:
+                templateRef: account.FTA_inline
+                versionLabel: v1
