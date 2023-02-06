@@ -1,0 +1,25 @@
+template:
+  name: FTA pipeline
+  identifier: FTA_pipeline
+  versionLabel: v2
+  type: Pipeline
+  tags: {}
+  spec:
+    stages:
+      - stage:
+          name: ds
+          identifier: ds
+          template:
+            templateRef: account.FTA_remote_manager
+            versionLabel: vssd
+            templateInputs:
+              type: Approval
+              spec:
+                execution:
+                  steps:
+                    - step:
+                        identifier: dsf
+                        type: HarnessApproval
+                        spec:
+                          approvers:
+                            userGroups: <+input>
