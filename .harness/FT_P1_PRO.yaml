@@ -1,0 +1,53 @@
+pipeline:
+  name: FT_P1_PRO
+  identifier: FT_P1_PRO
+  template:
+    templateRef: FT_PIPELINE_PRO_del
+    versionLabel: v2
+    templateInputs:
+      stages:
+        - stage:
+            identifier: delPro
+            template:
+              templateInputs:
+                type: Approval
+                spec:
+                  execution:
+                    steps:
+                      - step:
+                          identifier: das
+                          type: HarnessApproval
+                          spec:
+                            approvers:
+                              userGroups: <+input>
+        - stage:
+            identifier: manangerPro
+            template:
+              templateInputs:
+                type: Approval
+                spec:
+                  execution:
+                    steps:
+                      - step:
+                          identifier: asd
+                          type: HarnessApproval
+                          spec:
+                            approvers:
+                              userGroups: <+input>
+        - stage:
+            identifier: inlinePro
+            template:
+              templateInputs:
+                type: Approval
+                spec:
+                  execution:
+                    steps:
+                      - step:
+                          identifier: ds
+                          type: HarnessApproval
+                          spec:
+                            approvers:
+                              userGroups: <+input>
+  tags: {}
+  projectIdentifier: AmitTest
+  orgIdentifier: GitXOrg
