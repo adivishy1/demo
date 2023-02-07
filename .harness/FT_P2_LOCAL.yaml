@@ -1,0 +1,25 @@
+pipeline:
+  name: FT_P2_LOCAL
+  identifier: FT_P2_LOCAL
+  template:
+    templateRef: jan30Pipeline1
+    versionLabel: v1
+    templateInputs:
+      stages:
+        - stage:
+            identifier: s3
+            template:
+              templateInputs:
+                type: Approval
+                spec:
+                  execution:
+                    steps:
+                      - step:
+                          identifier: asf
+                          type: HarnessApproval
+                          spec:
+                            approvers:
+                              userGroups: <+input>
+  tags: {}
+  projectIdentifier: GitX_Remote
+  orgIdentifier: default
