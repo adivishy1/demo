@@ -1,0 +1,53 @@
+pipeline:
+  name: FT_P3_ACC
+  identifier: FT_P3_ACC
+  template:
+    templateRef: account.FT_PIPELINE_DEL
+    versionLabel: v4
+    templateInputs:
+      stages:
+        - stage:
+            identifier: delegate
+            template:
+              templateInputs:
+                type: Approval
+                spec:
+                  execution:
+                    steps:
+                      - step:
+                          identifier: aa
+                          type: HarnessApproval
+                          spec:
+                            approvers:
+                              userGroups: <+input>
+        - stage:
+            identifier: manager
+            template:
+              templateInputs:
+                type: Approval
+                spec:
+                  execution:
+                    steps:
+                      - step:
+                          identifier: sa
+                          type: HarnessApproval
+                          spec:
+                            approvers:
+                              userGroups: <+input>
+        - stage:
+            identifier: inline
+            template:
+              templateInputs:
+                type: Approval
+                spec:
+                  execution:
+                    steps:
+                      - step:
+                          identifier: inline
+                          type: HarnessApproval
+                          spec:
+                            approvers:
+                              userGroups: <+input>
+  tags: {}
+  projectIdentifier: AmitTest
+  orgIdentifier: GitXOrg
