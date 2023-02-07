@@ -1,0 +1,53 @@
+pipeline:
+  name: FT_P2_ORG
+  identifier: FT_P2_ORG
+  template:
+    templateRef: org.FT_PIE_DEL_ORG
+    versionLabel: v2
+    templateInputs:
+      stages:
+        - stage:
+            identifier: delegateOrg
+            template:
+              templateInputs:
+                type: Approval
+                spec:
+                  execution:
+                    steps:
+                      - step:
+                          identifier: s
+                          type: HarnessApproval
+                          spec:
+                            approvers:
+                              userGroups: <+input>
+        - stage:
+            identifier: managerOrg
+            template:
+              templateInputs:
+                type: Approval
+                spec:
+                  execution:
+                    steps:
+                      - step:
+                          identifier: asd
+                          type: HarnessApproval
+                          spec:
+                            approvers:
+                              userGroups: <+input>
+        - stage:
+            identifier: inlineOrj
+            template:
+              templateInputs:
+                type: Approval
+                spec:
+                  execution:
+                    steps:
+                      - step:
+                          identifier: ds
+                          type: HarnessApproval
+                          spec:
+                            approvers:
+                              userGroups: <+input>
+  tags: {}
+  projectIdentifier: AmitTest
+  orgIdentifier: GitXOrg
