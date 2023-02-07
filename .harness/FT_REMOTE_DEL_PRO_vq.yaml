@@ -1,0 +1,28 @@
+template:
+  name: FT_REMOTE_DEL_PRO
+  identifier: FT_REMOTE_DEL_PRO
+  versionLabel: vq
+  type: Stage
+  projectIdentifier: AmitTest
+  orgIdentifier: GitXOrg
+  tags: {}
+  spec:
+    type: Approval
+    spec:
+      execution:
+        steps:
+          - step:
+              name: das
+              identifier: das
+              type: HarnessApproval
+              timeout: 1d
+              spec:
+                approvalMessage: |-
+                  Please review the following information
+                  and approve the pipeline progression
+                includePipelineExecutionHistory: true
+                approvers:
+                  minimumCount: 1
+                  disallowPipelineExecutor: false
+                  userGroups: <+input>
+                approverInputs: []
