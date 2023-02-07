@@ -1,0 +1,59 @@
+template:
+  name: FT_PIPELINE_DEL
+  identifier: FT_PIPELINE_DEL
+  versionLabel: v4
+  type: Pipeline
+  tags: {}
+  spec:
+    stages:
+      - stage:
+          name: delegate
+          identifier: delegate
+          template:
+            templateRef: account.FT_REMOTE_DELEGATEE
+            versionLabel: v2
+            templateInputs:
+              type: Approval
+              spec:
+                execution:
+                  steps:
+                    - step:
+                        identifier: aa
+                        type: HarnessApproval
+                        spec:
+                          approvers:
+                            userGroups: <+input>
+      - stage:
+          name: manager
+          identifier: manager
+          template:
+            templateRef: account.FT_REMOTE_MANAGER
+            versionLabel: v2
+            templateInputs:
+              type: Approval
+              spec:
+                execution:
+                  steps:
+                    - step:
+                        identifier: sa
+                        type: HarnessApproval
+                        spec:
+                          approvers:
+                            userGroups: <+input>
+      - stage:
+          name: inline
+          identifier: inline
+          template:
+            templateRef: account.FT_INLINE
+            versionLabel: v1
+            templateInputs:
+              type: Approval
+              spec:
+                execution:
+                  steps:
+                    - step:
+                        identifier: inline
+                        type: HarnessApproval
+                        spec:
+                          approvers:
+                            userGroups: <+input>
