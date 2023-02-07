@@ -1,0 +1,39 @@
+pipeline:
+  name: FT_P1_account_local
+  identifier: FT_P1_account_local
+  template:
+    templateRef: account.FTA_pipeline
+    versionLabel: v2
+    templateInputs:
+      stages:
+        - stage:
+            identifier: ds
+            template:
+              templateInputs:
+                type: Approval
+                spec:
+                  execution:
+                    steps:
+                      - step:
+                          identifier: dsf
+                          type: HarnessApproval
+                          spec:
+                            approvers:
+                              userGroups: <+input>
+        - stage:
+            identifier: delegate
+            template:
+              templateInputs:
+                type: Approval
+                spec:
+                  execution:
+                    steps:
+                      - step:
+                          identifier: dsf
+                          type: HarnessApproval
+                          spec:
+                            approvers:
+                              userGroups: <+input>
+  tags: {}
+  projectIdentifier: GitX_Remote
+  orgIdentifier: default
