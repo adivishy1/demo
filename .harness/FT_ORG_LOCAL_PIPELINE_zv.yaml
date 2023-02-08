@@ -1,0 +1,60 @@
+template:
+  name: FT_ORG_LOCAL_PIPELINE
+  identifier: FT_ORG_LOCAL_PIPELINE
+  versionLabel: zv
+  type: Pipeline
+  orgIdentifier: default
+  tags: {}
+  spec:
+    stages:
+      - stage:
+          name: inline
+          identifier: inline
+          template:
+            templateRef: org.FT_INLINE_STAGE_LOCAL
+            versionLabel: v1
+            templateInputs:
+              type: Approval
+              spec:
+                execution:
+                  steps:
+                    - step:
+                        identifier: sdv
+                        type: HarnessApproval
+                        spec:
+                          approvers:
+                            userGroups: <+input>
+      - stage:
+          name: delegate
+          identifier: delegate
+          template:
+            templateRef: org.FT_STAGE_LOCAL_DEL
+            versionLabel: v11
+            templateInputs:
+              type: Approval
+              spec:
+                execution:
+                  steps:
+                    - step:
+                        identifier: asd
+                        type: HarnessApproval
+                        spec:
+                          approvers:
+                            userGroups: <+input>
+      - stage:
+          name: manager
+          identifier: manager
+          template:
+            templateRef: org.FT_STAGE_ORG_LOCAL_MAN
+            versionLabel: v1
+            templateInputs:
+              type: Approval
+              spec:
+                execution:
+                  steps:
+                    - step:
+                        identifier: as
+                        type: HarnessApproval
+                        spec:
+                          approvers:
+                            userGroups: <+input>
