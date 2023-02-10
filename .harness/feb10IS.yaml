@@ -1,0 +1,55 @@
+inputSet:
+  pipeline:
+    identifier: FT_P1_PRO
+    template:
+      templateInputs:
+        stages:
+          - stage:
+              identifier: delPro
+              template:
+                templateInputs:
+                  type: Approval
+                  spec:
+                    execution:
+                      steps:
+                        - step:
+                            identifier: das
+                            type: HarnessApproval
+                            spec:
+                              approvers:
+                                userGroups:
+                                  - account._account_all_users
+          - stage:
+              identifier: manangerPro
+              template:
+                templateInputs:
+                  type: Approval
+                  spec:
+                    execution:
+                      steps:
+                        - step:
+                            identifier: asd
+                            type: HarnessApproval
+                            spec:
+                              approvers:
+                                userGroups:
+                                  - account._account_all_users
+          - stage:
+              identifier: inlinePro
+              template:
+                templateInputs:
+                  type: Approval
+                  spec:
+                    execution:
+                      steps:
+                        - step:
+                            identifier: ds
+                            type: HarnessApproval
+                            spec:
+                              approvers:
+                                userGroups:
+                                  - account._account_all_users
+  name: feb10IS
+  identifier: feb10IS
+  orgIdentifier: GitXOrg
+  projectIdentifier: AmitTest
