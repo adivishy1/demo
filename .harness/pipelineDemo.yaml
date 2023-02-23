@@ -1,0 +1,16 @@
+pipeline:
+  name: pipelineDemo
+  identifier: pipelineDemo
+  projectIdentifier: GitX_Remote
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: fs
+        identifier: fs
+        description: ""
+        type: Pipeline
+        spec:
+          org: default
+          pipeline: pipelineGitXmaster
+          project: GitX_Remote
