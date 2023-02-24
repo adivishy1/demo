@@ -1,0 +1,9 @@
+overlayInputSet:
+  name: demoMainOS123
+  identifier: demoMainOS123
+  orgIdentifier: default
+  projectIdentifier: GitX_Remote
+  pipelineIdentifier: remoteasdgsdfsdf
+  inputSetReferences:
+    - demoMainIS123
+  tags: {}
