@@ -1,0 +1,21 @@
+inputSet:
+  name: demoMainIS123
+  identifier: demoMainIS123
+  orgIdentifier: default
+  projectIdentifier: GitX_Remote
+  pipeline:
+    identifier: remoteasdgsdfsdf
+    stages:
+      - stage:
+          identifier: af
+          type: Approval
+          spec:
+            execution:
+              steps:
+                - step:
+                    identifier: asf
+                    type: HarnessApproval
+                    spec:
+                      approvers:
+                        userGroups:
+                          - account.testUserGroup2
