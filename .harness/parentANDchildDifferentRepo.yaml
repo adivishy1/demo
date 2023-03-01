@@ -1,5 +1,5 @@
 pipeline:
-  name: parentANDchildDifferentRepo
+  name: parentANDchildDifferentRepo2
   identifier: parentANDchildDifferentRepo
   projectIdentifier: AmitTest
   orgIdentifier: default
