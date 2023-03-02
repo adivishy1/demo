@@ -1,0 +1,21 @@
+inputSet:
+  name: testInputSetNPE_QA
+  identifier: testInputSetNPE_QA
+  orgIdentifier: default
+  projectIdentifier: AmitTest
+  pipeline:
+    identifier: testInputSetNPE
+    stages:
+      - stage:
+          identifier: asdf
+          type: Approval
+          spec:
+            execution:
+              steps:
+                - step:
+                    identifier: sad
+                    type: HarnessApproval
+                    spec:
+                      approvers:
+                        userGroups:
+                          - account._account_all_users
