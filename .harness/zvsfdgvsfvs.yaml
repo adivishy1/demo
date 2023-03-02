@@ -1,0 +1,21 @@
+inputSet:
+  name: zvsfdgvsfvs
+  identifier: zvsfdgvsfvs
+  orgIdentifier: default
+  projectIdentifier: test_tf_hf
+  pipeline:
+    identifier: test_tf_hf
+    stages:
+      - stage:
+          identifier: asdfasdf
+          type: Approval
+          spec:
+            execution:
+              steps:
+                - step:
+                    identifier: asdfadsfas
+                    type: HarnessApproval
+                    spec:
+                      approvers:
+                        userGroups:
+                          - account._account_all_users
