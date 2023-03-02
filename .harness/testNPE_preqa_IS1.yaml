@@ -1,0 +1,21 @@
+inputSet:
+  name: testNPE_preqa_IS1
+  identifier: testNPE_preqa_IS1
+  orgIdentifier: Simlified_Git_sync
+  projectIdentifier: TestAmit
+  pipeline:
+    identifier: testNPE_preqa
+    stages:
+      - stage:
+          identifier: dasf
+          type: Approval
+          spec:
+            execution:
+              steps:
+                - step:
+                    identifier: asfd
+                    type: HarnessApproval
+                    spec:
+                      approvers:
+                        userGroups:
+                          - account._account_all_users
