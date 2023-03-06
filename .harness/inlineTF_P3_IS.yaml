@@ -1,0 +1,21 @@
+inputSet:
+  name: inlineTF_P3_IS
+  identifier: inlineTF_P3_IS
+  orgIdentifier: default
+  projectIdentifier: GitX_Remote
+  pipeline:
+    identifier: inlineTF_P3
+    stages:
+      - stage:
+          identifier: asdf
+          type: Approval
+          spec:
+            execution:
+              steps:
+                - step:
+                    identifier: dsaf
+                    type: HarnessApproval
+                    spec:
+                      approvers:
+                        userGroups:
+                          - account.testUserGroup2
