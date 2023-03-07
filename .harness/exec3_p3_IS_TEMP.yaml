@@ -1,0 +1,13 @@
+pipeline:
+  name: exec3_p3_IS_TEMP
+  identifier: exec3_p3_IS_TEMP
+  projectIdentifier: GitX_Remote
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: xdf
+        identifier: xdf
+        template:
+          templateRef: stageDemoMain
+          versionLabel: v2
