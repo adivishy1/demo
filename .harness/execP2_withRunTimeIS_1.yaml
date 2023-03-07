@@ -1,0 +1,21 @@
+inputSet:
+  name: execP2_withRunTimeIS_1
+  identifier: execP2_withRunTimeIS_1
+  orgIdentifier: default
+  projectIdentifier: GitX_Remote
+  pipeline:
+    identifier: execP2_withRunTimeIS
+    stages:
+      - stage:
+          identifier: jk
+          type: Approval
+          spec:
+            execution:
+              steps:
+                - step:
+                    identifier: fdg
+                    type: HarnessApproval
+                    spec:
+                      approvers:
+                        userGroups:
+                          - account.testUserGroup2
