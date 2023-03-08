@@ -1,0 +1,30 @@
+pipeline:
+  name: execP6
+  identifier: execP6
+  projectIdentifier: GitX_Remote
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: fds
+        identifier: fds
+        description: ""
+        type: Custom
+        spec:
+          execution:
+            steps:
+              - step:
+                  type: ShellScript
+                  name: ShellScript_1
+                  identifier: ShellScript_1
+                  spec:
+                    shell: Bash
+                    onDelegate: true
+                    source:
+                      type: Inline
+                      spec:
+                        script: echo 123
+                    environmentVariables: []
+                    outputVariables: []
+                  timeout: 10m
+        tags: {}
