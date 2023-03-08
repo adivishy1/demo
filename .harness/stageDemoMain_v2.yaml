@@ -24,5 +24,6 @@ template:
                 approvers:
                   minimumCount: 1
                   disallowPipelineExecutor: false
-                  userGroups: <+input>
+                  userGroups:
+                    - account.testUserGroup2
                 approverInputs: []
