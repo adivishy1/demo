@@ -1,0 +1,21 @@
+inputSet:
+  name: importIS2Test
+  identifier: importIS2Test
+  orgIdentifier: Simlified_Git_sync
+  projectIdentifier: SimplifiedGitSync_Do_Not_Delete
+  pipeline:
+    identifier: import2Test
+    stages:
+      - stage:
+          identifier: asd
+          type: Approval
+          spec:
+            execution:
+              steps:
+                - step:
+                    identifier: dsa
+                    type: HarnessApproval
+                    spec:
+                      approvers:
+                        userGroups:
+                          - account._account_all_users
