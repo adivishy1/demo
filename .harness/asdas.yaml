@@ -1,0 +1,21 @@
+inputSet:
+  name: asdas
+  identifier: asdas
+  orgIdentifier: default
+  projectIdentifier: GitX_Remote
+  pipeline:
+    identifier: inputSetTestP1
+    stages:
+      - stage:
+          identifier: ds
+          type: Approval
+          spec:
+            execution:
+              steps:
+                - step:
+                    identifier: d
+                    type: HarnessApproval
+                    spec:
+                      approvers:
+                        userGroups:
+                          - account.testUserGroup2
