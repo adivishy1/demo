@@ -1,0 +1,24 @@
+pipeline:
+  name: mar14P2DemoMainPatch
+  identifier: mar14P2DemoMainPatch
+  projectIdentifier: GitX_Remote
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: ds
+        identifier: ds
+        template:
+          templateRef: mar14StageDemoMainPatch
+          versionLabel: v1
+          templateInputs:
+            type: Approval
+            spec:
+              execution:
+                steps:
+                  - step:
+                      identifier: sa
+                      type: HarnessApproval
+                      spec:
+                        approvers:
+                          userGroups: <+input>
