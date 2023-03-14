@@ -24,7 +24,10 @@ pipeline:
                       type: Inline
                       spec:
                         script: exit 0
-                    environmentVariables: []
+                    environmentVariables:
+                      - name: var1
+                        type: String
+                        value: <+input>
                     outputVariables: []
                   timeout: <+input>
         tags: {}
