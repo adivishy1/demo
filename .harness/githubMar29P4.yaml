@@ -1,0 +1,13 @@
+pipeline:
+  name: githubMar29P4
+  identifier: githubMar29P4
+  projectIdentifier: GitX_Remote
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: l
+        identifier: l
+        template:
+          templateRef: mar21Stage6
+          versionLabel: v1
