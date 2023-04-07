@@ -6,7 +6,7 @@ pipeline:
   tags: {}
   stages:
     - stage:
-        name: sfd
+        name: sfd sd
         identifier: sfd
         description: ""
         type: Approval
