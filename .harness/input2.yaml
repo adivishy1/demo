@@ -1,0 +1,21 @@
+inputSet:
+  name: input2
+  identifier: input2
+  orgIdentifier: default
+  projectIdentifier: GitX_Remote
+  pipeline:
+    identifier: importP1
+    stages:
+      - stage:
+          identifier: s1
+          type: Approval
+          spec:
+            execution:
+              steps:
+                - step:
+                    identifier: w1
+                    type: HarnessApproval
+                    spec:
+                      approvers:
+                        userGroups:
+                          - account.testUserGroup2
