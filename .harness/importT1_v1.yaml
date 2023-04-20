@@ -1,0 +1,18 @@
+template:
+  name: importT1
+  identifier: importT1
+  versionLabel: v1
+  type: Step
+  tags: {}
+  spec:
+    timeout: 10m
+    type: ShellScript
+    spec:
+      shell: Bash
+      onDelegate: true
+      source:
+        type: Inline
+        spec:
+          script: echo 1
+      environmentVariables: []
+      outputVariables: []
