@@ -8,32 +8,8 @@ pipeline:
     - stage:
         name: s1
         identifier: s1
-        description: ""
-        type: Approval
-        spec:
-          execution:
-            steps:
-              - step:
-                  name: w1
-                  identifier: w1
-                  type: HarnessApproval
-                  timeout: 1d
-                  spec:
-                    approvalMessage: |-
-                      Please review the following information
-                      and approve the pipeline progression
-                    includePipelineExecutionHistory: true
-                    approvers:
-                      minimumCount: 1
-                      disallowPipelineExecutor: false
-                      userGroups: <+input>
-                    approverInputs: []
-        tags: {}
-    - stage:
-        name: s1
-        identifier: s1
         template:
-          templateRef: importProT2
+          templateRef: stage_cds
           versionLabel: v1
           templateInputs:
             type: Approval
@@ -45,4 +21,4 @@ pipeline:
                       type: HarnessApproval
                       spec:
                         approvers:
-                          userGroups: <+input>        
+                          userGroups: <+input>
