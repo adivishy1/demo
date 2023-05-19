@@ -29,21 +29,3 @@ pipeline:
                       userGroups: <+input>
                     approverInputs: []
         tags: {}
-    - stage:
-        name: s11
-        identifier: s11
-        template:
-          templateRef: stage_cds
-          versionLabel: v1
-          templateInputs:
-            type: Approval
-            spec:
-              execution:
-                steps:
-                  - step:
-                      identifier: ds
-                      type: HarnessApproval
-                      spec:
-                        approvers:
-                          userGroups: <+input>
-      
