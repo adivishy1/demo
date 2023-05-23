@@ -1,6 +1,6 @@
 template:
-  name: stage s1
-  identifier: stage_s1
+  name: stage s2
+  identifier: stage_s2
   versionLabel: v1
   type: Stage
   projectIdentifier: naidusanity
