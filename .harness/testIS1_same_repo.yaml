@@ -1,0 +1,21 @@
+inputSet:
+  name: testIS1 same repo
+  identifier: testIS1_same_repo
+  orgIdentifier: default
+  projectIdentifier: GitX_Remote
+  pipeline:
+    identifier: test_is_p1
+    stages:
+      - stage:
+          identifier: ds
+          type: Approval
+          spec:
+            execution:
+              steps:
+                - step:
+                    identifier: fds
+                    type: HarnessApproval
+                    spec:
+                      approvers:
+                        userGroups:
+                          - account._account_all_users
