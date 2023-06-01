@@ -1,0 +1,21 @@
+inputSet:
+  name: stage IS same repo
+  identifier: stage_IS_same_repo
+  orgIdentifier: default
+  projectIdentifier: PipelineSanity
+  pipeline:
+    identifier: gitX_testing
+    stages:
+      - stage:
+          identifier: s1
+          type: Approval
+          spec:
+            execution:
+              steps:
+                - step:
+                    identifier: s
+                    type: HarnessApproval
+                    spec:
+                      approvers:
+                        userGroups:
+                          - account._account_all_users
