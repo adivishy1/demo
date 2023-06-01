@@ -1,5 +1,6 @@
 inputSet:
   name: testIS1 same repo
+  tags: {}
   identifier: testIS1_same_repo
   orgIdentifier: default
   projectIdentifier: GitX_Remote
@@ -7,7 +8,7 @@ inputSet:
     identifier: test_is_p1
     stages:
       - stage:
-          identifier: ds
+          identifier: ds1
           type: Approval
           spec:
             execution:
