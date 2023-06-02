@@ -1,0 +1,21 @@
+inputSet:
+  name: asdfasdfasdfasdfadsfd
+  identifier: asdfasdfasdfasdfadsfd
+  orgIdentifier: default
+  projectIdentifier: GitX_Remote
+  pipeline:
+    identifier: test_remote_qr123
+    stages:
+      - stage:
+          identifier: asd
+          type: Approval
+          spec:
+            execution:
+              steps:
+                - step:
+                    identifier: dsf
+                    type: HarnessApproval
+                    spec:
+                      approvers:
+                        userGroups:
+                          - account._account_all_users
