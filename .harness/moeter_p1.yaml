@@ -1,0 +1,24 @@
+pipeline:
+  name: moeter p1
+  identifier: moeter_p1
+  projectIdentifier: GitX_Remote
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: sd
+        identifier: sd
+        template:
+          templateRef: stage_cds
+          versionLabel: v1
+          templateInputs:
+            type: Approval
+            spec:
+              execution:
+                steps:
+                  - step:
+                      identifier: ds
+                      type: HarnessApproval
+                      spec:
+                        approvers:
+                          userGroups: <+input>
