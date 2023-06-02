@@ -6,7 +6,7 @@ pipeline:
   tags: {}
   stages:
     - stage:
-        name: asafsd
+        name: asafsdsad
         identifier: as
         template:
           templateRef: stage_cds
