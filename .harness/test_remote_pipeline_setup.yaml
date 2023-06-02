@@ -1,0 +1,24 @@
+pipeline:
+  name: test remote pipeline setup
+  identifier: test_remote_pipeline_setup
+  projectIdentifier: GitX_Remote
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: as
+        identifier: as
+        template:
+          templateRef: stage_cds
+          versionLabel: v1
+          templateInputs:
+            type: Approval
+            spec:
+              execution:
+                steps:
+                  - step:
+                      identifier: ds
+                      type: HarnessApproval
+                      spec:
+                        approvers:
+                          userGroups: <+input>
