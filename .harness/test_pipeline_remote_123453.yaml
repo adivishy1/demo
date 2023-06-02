@@ -1,6 +1,6 @@
 pipeline:
-  name: test pipeline remote 123453
-  identifier: test_pipeline_remote_123453
+  name: test pipeline remote 1234536
+  identifier: test_pipeline_remote_1234536
   projectIdentifier: GitX_Remote
   orgIdentifier: default
   tags: {}
