@@ -6,7 +6,7 @@ pipeline:
   tags: {}
   stages:
     - stage:
-        name: fsd
+        name: fsddas
         identifier: fsd
         template:
           templateRef: stage_cds
