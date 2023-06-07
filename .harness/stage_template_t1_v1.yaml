@@ -12,7 +12,7 @@ template:
       execution:
         steps:
           - step:
-              name: sd
+              name: sdsdf
               identifier: sd
               type: HarnessApproval
               timeout: 1d
