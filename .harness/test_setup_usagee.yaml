@@ -39,3 +39,20 @@ pipeline:
                       spec:
                         approvers:
                           userGroups: <+input>
+    - stage:
+        name: s4
+        identifier: s4
+        template:
+          templateRef: june_22_stage_ref2
+          versionLabel: v1
+          templateInputs:
+            type: Approval
+            spec:
+              execution:
+                steps:
+                  - step:
+                      identifier: sad
+                      type: HarnessApproval
+                      spec:
+                        approvers:
+                          userGroups: <+input>                                  
