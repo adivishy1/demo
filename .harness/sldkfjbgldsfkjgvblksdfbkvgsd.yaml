@@ -34,7 +34,7 @@ pipeline:
               execution:
                 steps:
                   - step:
-                      identifier: as
+                      identifier: ds
                       type: HarnessApproval
                       spec:
                         approvers:
