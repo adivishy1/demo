@@ -22,3 +22,20 @@ pipeline:
                       spec:
                         approvers:
                           userGroups: <+input>
+    - stage:
+        name: s1
+        identifier: s1
+        template:
+          templateRef: june_22_stage
+          versionLabel: v1
+          templateInputs:
+            type: Approval
+            spec:
+              execution:
+                steps:
+                  - step:
+                      identifier: sad
+                      type: HarnessApproval
+                      spec:
+                        approvers:
+                          userGroups: <+input>                          
