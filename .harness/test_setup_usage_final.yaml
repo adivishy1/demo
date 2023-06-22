@@ -21,21 +21,4 @@ pipeline:
                       type: HarnessApproval
                       spec:
                         approvers:
-                          userGroups: <+input>
-    - stage:
-        name: s11
-        identifier: s11
-        template:
-          templateRef: june_22_stage
-          versionLabel: v1
-          templateInputs:
-            type: Approval
-            spec:
-              execution:
-                steps:
-                  - step:
-                      identifier: as
-                      type: HarnessApproval
-                      spec:
-                        approvers:
-                          userGroups: <+input>                          
+                          userGroups: <+input>                      
