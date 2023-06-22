@@ -1,0 +1,24 @@
+pipeline:
+  name: test entity setup uage
+  identifier: test_entity_setup_uage
+  projectIdentifier: GitX_Remote
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: df
+        identifier: df
+        template:
+          templateRef: june_22_stage
+          versionLabel: v1
+          templateInputs:
+            type: Approval
+            spec:
+              execution:
+                steps:
+                  - step:
+                      identifier: as
+                      type: HarnessApproval
+                      spec:
+                        approvers:
+                          userGroups: <+input>
