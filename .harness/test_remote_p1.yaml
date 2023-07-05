@@ -6,7 +6,7 @@ pipeline:
   tags: {}
   stages:
     - stage:
-        name: c
+        name: cf
         identifier: c
         template:
           templateRef: june_22_stage_ref2
