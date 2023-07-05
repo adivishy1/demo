@@ -1,0 +1,24 @@
+pipeline:
+  name: test remote qipeline1
+  identifier: test_remote_qipeline1
+  projectIdentifier: GitX_Remote
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: dfs
+        identifier: dfs
+        template:
+          templateRef: june_22_stage_ref2
+          versionLabel: v1
+          templateInputs:
+            type: Approval
+            spec:
+              execution:
+                steps:
+                  - step:
+                      identifier: sad
+                      type: HarnessApproval
+                      spec:
+                        approvers:
+                          userGroups: <+input>
