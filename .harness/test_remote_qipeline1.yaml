@@ -6,7 +6,7 @@ pipeline:
   tags: {}
   stages:
     - stage:
-        name: dfs
+        name: dfsasdf
         identifier: dfs
         template:
           templateRef: june_22_stage_ref2
