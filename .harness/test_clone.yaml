@@ -1,0 +1,32 @@
+pipeline:
+  name: test clone
+  identifier: test_clone
+  projectIdentifier: naidusanity
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: dfs
+        identifier: dfs
+        description: ""
+        type: Approval
+        spec:
+          execution:
+            steps:
+              - step:
+                  name: fdg
+                  identifier: fdg
+                  type: HarnessApproval
+                  timeout: 1d
+                  spec:
+                    approvalMessage: |-
+                      Please review the following information
+                      and approve the pipeline progression
+                    includePipelineExecutionHistory: true
+                    approvers:
+                      minimumCount: 1
+                      disallowPipelineExecutor: false
+                      userGroups: <+input>
+                    isAutoRejectEnabled: false
+                    approverInputs: []
+        tags: {}
