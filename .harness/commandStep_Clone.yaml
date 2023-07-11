@@ -1,0 +1,107 @@
+---
+pipeline:
+  projectIdentifier: "naidusanity"
+  orgIdentifier: "default"
+  tags: {}
+  stages:
+  - stage:
+      name: "app"
+      identifier: "app"
+      description: ""
+      type: "Approval"
+      spec:
+        execution:
+          steps:
+          - step:
+              name: "app"
+              identifier: "app"
+              type: "HarnessApproval"
+              timeout: "1d"
+              spec:
+                approvalMessage: "Please review the following information\nand approve\
+                  \ the pipeline progression"
+                includePipelineExecutionHistory: true
+                approvers:
+                  minimumCount: 1
+                  disallowPipelineExecutor: false
+                  userGroups:
+                  - "shalinitest"
+                isAutoRejectEnabled: false
+                approverInputs: []
+      tags: {}
+  - stage:
+      name: "cd"
+      identifier: "cd"
+      description: ""
+      type: "Deployment"
+      spec:
+        deploymentType: "Ssh"
+        service:
+          serviceRef: "sshservice"
+        environment:
+          environmentRef: "sshenv"
+          deployToAll: false
+          infrastructureDefinitions:
+          - identifier: "sshinfra"
+        execution:
+          steps:
+          - stepGroup:
+              name: "sg"
+              identifier: "sg"
+              steps:
+              - step:
+                  name: "Deploy"
+                  identifier: "Deploy"
+                  timeout: "10m"
+                  strategy:
+                    repeat:
+                      items: "<+stage.output.hosts>"
+                  template:
+                    templateRef: "account.Default_Install_Jar_Bash"
+                    templateInputs:
+                      type: "Command"
+                      spec:
+                        environmentVariables:
+                        - name: "DestinationDirectory"
+                          type: "String"
+                          value: "$HOME/<+service.name>/<+env.name>"
+                        - name: "WorkingDirectory"
+                          type: "String"
+                          value: "$HOME/<+service.name>/<+env.name>/tomcat/bin"
+              - step:
+                  name: "Deploy"
+                  identifier: "Deploy2"
+                  timeout: "10m"
+                  when:
+                    stageStatus: "All"
+                  strategy:
+                    repeat:
+                      items: "<+stage.output.hosts>"
+                  template:
+                    templateRef: "account.Default_Install_Jar_Bash"
+                    templateInputs:
+                      type: "Command"
+                      spec:
+                        environmentVariables:
+                        - name: "DestinationDirectory"
+                          type: "String"
+                          value: "$HOME/<+service.name>/<+env.name>"
+                        - name: "WorkingDirectory"
+                          type: "String"
+                          value: "$HOME/<+service.name>/<+env.name>/tomcat/bin"
+          rollbackSteps:
+          - step:
+              type: "Wait"
+              name: "Wait_1"
+              identifier: "Wait_1"
+              spec:
+                duration: "10m"
+      tags: {}
+      failureStrategies:
+      - onFailure:
+          errors:
+          - "AllErrors"
+          action:
+            type: "StageRollback"
+  identifier: "commandStep_Clone"
+  name: "commandStep - Clone"
