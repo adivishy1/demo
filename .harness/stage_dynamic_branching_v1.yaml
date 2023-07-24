@@ -17,4 +17,4 @@ template:
               template:
                 templateRef: step_dynamic_branching
                 versionLabel: v1
-                gitBranch: main
+                gitBranch: main-patch-dyn
