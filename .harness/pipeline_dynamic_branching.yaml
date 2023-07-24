@@ -1,0 +1,13 @@
+pipeline:
+  name: pipeline dynamic branching
+  identifier: pipeline_dynamic_branching
+  projectIdentifier: naidusanity
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: dfs
+        identifier: dfs
+        template:
+          templateRef: stage_dynamic_branching
+          versionLabel: v1
