@@ -1,0 +1,20 @@
+template:
+  name: stage dynamic branching
+  identifier: stage_dynamic_branching
+  versionLabel: v1
+  type: Stage
+  projectIdentifier: naidusanity
+  orgIdentifier: default
+  tags: {}
+  spec:
+    type: Custom
+    spec:
+      execution:
+        steps:
+          - step:
+              name: sss
+              identifier: sss
+              template:
+                templateRef: step_dynamic_branching
+                versionLabel: v1
+                gitBranch: main
