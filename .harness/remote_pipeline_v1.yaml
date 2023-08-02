@@ -6,7 +6,7 @@ pipeline:
   tags: {}
   stages:
     - stage:
-        name: asda
+        name: asda12312
         identifier: asda
         description: ""
         type: Approval
