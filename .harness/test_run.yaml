@@ -6,8 +6,8 @@ pipeline:
   tags: {}
   stages:
     - stage:
-        name: sadf
-        identifier: sadf
+        name: sadf123
+        identifier: sadf123
         description: ""
         type: Approval
         spec:
