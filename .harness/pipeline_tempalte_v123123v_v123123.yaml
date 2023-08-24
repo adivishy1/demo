@@ -1,0 +1,16 @@
+template:
+  name: pipeline tempalte v123123v
+  identifier: pipeline_tempalte_v123123v
+  versionLabel: v123123
+  type: Pipeline
+  projectIdentifier: GitX_Remote
+  orgIdentifier: default
+  tags: {}
+  spec:
+    stages:
+      - stage:
+          name: dfg
+          identifier: dfg
+          template:
+            templateRef: stage_template_v123123
+            versionLabel: v123
