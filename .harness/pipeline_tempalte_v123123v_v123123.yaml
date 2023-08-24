@@ -14,3 +14,4 @@ template:
           template:
             templateRef: stage_template_v123123
             versionLabel: v123
+            gitBranch: abcd
