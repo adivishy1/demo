@@ -1,0 +1,16 @@
+template:
+  name: test piepline test
+  identifier: test_piepline_test
+  versionLabel: v1
+  type: Pipeline
+  projectIdentifier: GitX_Remote
+  orgIdentifier: default
+  tags: {}
+  spec:
+    stages:
+      - stage:
+          name: sd
+          identifier: sd
+          template:
+            templateRef: test_remote_stage_test
+            versionLabel: v1
