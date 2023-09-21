@@ -1,0 +1,28 @@
+template:
+  name: case 2 ND pipeline
+  identifier: case_2_ND_pipeline
+  versionLabel: dasgfs
+  type: Pipeline
+  projectIdentifier: adithyaGitX
+  orgIdentifier: default
+  tags: {}
+  spec:
+    stages:
+      - stage:
+          name: dsa
+          identifier: dsa
+          template:
+            templateRef: ND_stage
+            versionLabel: asdfa
+            gitBranch: abcd
+            templateInputs:
+              type: Approval
+              spec:
+                execution:
+                  steps:
+                    - step:
+                        identifier: asdf
+                        type: HarnessApproval
+                        spec:
+                          approvers:
+                            userGroups: <+input>
