@@ -1,0 +1,28 @@
+template:
+  name: "ND pipeline "
+  identifier: ND_pipeline
+  versionLabel: v12312
+  type: Pipeline
+  projectIdentifier: adithyaGitX
+  orgIdentifier: default
+  tags: {}
+  spec:
+    stages:
+      - stage:
+          name: sdf
+          identifier: sdf
+          template:
+            templateRef: default_stage
+            versionLabel: t1123
+            gitBranch: main
+            templateInputs:
+              type: Approval
+              spec:
+                execution:
+                  steps:
+                    - step:
+                        identifier: sdf
+                        type: HarnessApproval
+                        spec:
+                          approvers:
+                            userGroups: <+input>
