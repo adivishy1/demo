@@ -12,8 +12,8 @@ template:
       execution:
         steps:
           - step:
-              name: ds1
-              identifier: ds
+              name: ds11
+              identifier: ds1
               type: HarnessApproval
               timeout: 1d
               spec:
