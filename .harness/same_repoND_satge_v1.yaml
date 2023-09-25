@@ -12,7 +12,7 @@ template:
       execution:
         steps:
           - step:
-              name: ds
+              name: ds1
               identifier: ds
               type: HarnessApproval
               timeout: 1d
