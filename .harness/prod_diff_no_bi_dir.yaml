@@ -20,6 +20,7 @@ pipeline:
                   - step:
                       identifier: sdfsdf
                       type: HarnessApproval
+                      timeout: <+input>
                       spec:
                         approvers:
                           minimumCount: <+input>
