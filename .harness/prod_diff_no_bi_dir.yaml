@@ -1,0 +1,26 @@
+pipeline:
+  name: prod diff no bi dir
+  identifier: prod_diff_no_bi_dir
+  projectIdentifier: TestGitSync
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: sdf
+        identifier: sdf
+        template:
+          templateRef: prod_ND_stage1
+          versionLabel: vsd
+          gitBranch: aa-main-patch
+          templateInputs:
+            type: Approval
+            spec:
+              execution:
+                steps:
+                  - step:
+                      identifier: sdfsdf
+                      type: HarnessApproval
+                      spec:
+                        approvers:
+                          minimumCount: <+input>
+                          userGroups: <+input>
