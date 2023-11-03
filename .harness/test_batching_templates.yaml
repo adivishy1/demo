@@ -1,0 +1,78 @@
+pipeline:
+  name: test batching templates
+  identifier: test_batching_templates
+  projectIdentifier: AmitGitX
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: stage4
+        identifier: s1
+        template:
+          templateRef: stage_4_template
+          versionLabel: t2
+          gitBranch: main
+          templateInputs:
+            type: Approval
+            spec:
+              execution:
+                steps:
+                  - step:
+                      identifier: asdf
+                      type: HarnessApproval
+                      spec:
+                        approvers:
+                          userGroups: <+input>
+    - stage:
+        name: stage3
+        identifier: stage3
+        template:
+          templateRef: stage3_temopate
+          versionLabel: v1243
+          gitBranch: main
+          templateInputs:
+            type: Approval
+            spec:
+              execution:
+                steps:
+                  - step:
+                      identifier: sdf
+                      type: HarnessApproval
+                      spec:
+                        approvers:
+                          userGroups: <+input>
+    - stage:
+        name: stage2
+        identifier: stage2
+        template:
+          templateRef: stage2_tempalte
+          versionLabel: v23
+          gitBranch: main
+          templateInputs:
+            type: Approval
+            spec:
+              execution:
+                steps:
+                  - step:
+                      identifier: asf
+                      type: HarnessApproval
+                      spec:
+                        approvers:
+                          userGroups: <+input>
+    - stage:
+        name: stage1
+        identifier: stage1
+        template:
+          templateRef: stage_1_templeta
+          versionLabel: q32
+          templateInputs:
+            type: Approval
+            spec:
+              execution:
+                steps:
+                  - step:
+                      identifier: sdf
+                      type: HarnessApproval
+                      spec:
+                        approvers:
+                          userGroups: <+input>
