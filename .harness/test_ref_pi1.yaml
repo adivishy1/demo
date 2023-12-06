@@ -1,0 +1,24 @@
+pipeline:
+  name: test ref pi1
+  identifier: test_ref_pi1
+  projectIdentifier: AmitTest
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: g
+        identifier: g
+        template:
+          templateRef: qa_stage_template
+          versionLabel: v2
+          templateInputs:
+            type: Approval
+            spec:
+              execution:
+                steps:
+                  - step:
+                      identifier: ds
+                      type: HarnessApproval
+                      spec:
+                        approvers:
+                          userGroups: <+input>
