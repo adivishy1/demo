@@ -1,0 +1,32 @@
+pipeline:
+  name: test new pipeline pr
+  identifier: test_new_pipeline_pr
+  projectIdentifier: test_adi
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: d
+        identifier: d
+        description: ""
+        type: Approval
+        spec:
+          execution:
+            steps:
+              - step:
+                  name: fdf
+                  identifier: fdf
+                  type: HarnessApproval
+                  timeout: 1d
+                  spec:
+                    approvalMessage: |-
+                      Please review the following information
+                      and approve the pipeline progression
+                    includePipelineExecutionHistory: true
+                    approvers:
+                      minimumCount: 1
+                      disallowPipelineExecutor: false
+                      userGroups: <+input>
+                    isAutoRejectEnabled: false
+                    approverInputs: []
+        tags: {}
