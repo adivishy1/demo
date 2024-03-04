@@ -22,4 +22,3 @@ template:
           template:
             templateRef: nbs_test_stage_template
             versionLabel: v2
-            gitBranch: abcd
