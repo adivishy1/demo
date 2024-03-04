@@ -1,0 +1,28 @@
+template:
+  name: nbs test stage template
+  identifier: nbs_test_stage_template
+  type: Stage
+  projectIdentifier: naidusanity
+  orgIdentifier: default
+  tags: {}
+  spec:
+    type: Approval
+    spec:
+      execution:
+        steps:
+          - step:
+              name: s1
+              identifier: s1
+              type: HarnessApproval
+              timeout: 1d
+              spec:
+                approvalMessage: updated
+                includePipelineExecutionHistory: true
+                approvers:
+                  minimumCount: 1
+                  disallowPipelineExecutor: false
+                  userGroups:
+                    - account._account_all_users
+                isAutoRejectEnabled: false
+                approverInputs: []
+  versionLabel: v2
