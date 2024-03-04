@@ -21,15 +21,5 @@ template:
           tags: {}
           template:
             templateRef: nbs_test_stage_template
-            versionLabel: v1
-            templateInputs:
-              type: Approval
-              spec:
-                execution:
-                  steps:
-                    - step:
-                        identifier: s1
-                        type: HarnessApproval
-                        spec:
-                          approvers:
-                            userGroups: <+input>
+            versionLabel: v2
+            gitBranch: abcd
