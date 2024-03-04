@@ -22,7 +22,6 @@ template:
           template:
             templateRef: nbs_test_stage_template
             versionLabel: v1
-            gitBranch: abcd
             templateInputs:
               type: Approval
               spec:
