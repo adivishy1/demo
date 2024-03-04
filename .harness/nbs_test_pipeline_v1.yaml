@@ -1,0 +1,35 @@
+template:
+  name: nbs test pipeline
+  identifier: nbs_test_pipeline
+  versionLabel: v1
+  type: Pipeline
+  projectIdentifier: naidusanity
+  orgIdentifier: default
+  tags: {}
+  spec:
+    stages:
+      - stage:
+          name: s1
+          identifier: s1
+          tags: {}
+          template:
+            templateRef: test_stage_template_reference_2qwe
+            versionLabel: ads
+      - stage:
+          name: s2
+          identifier: s2
+          tags: {}
+          template:
+            templateRef: nbs_test_stage_template
+            versionLabel: v1
+            templateInputs:
+              type: Approval
+              spec:
+                execution:
+                  steps:
+                    - step:
+                        identifier: s1
+                        type: HarnessApproval
+                        spec:
+                          approvers:
+                            userGroups: <+input>
