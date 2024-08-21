@@ -1,0 +1,28 @@
+template:
+  name: rewasfsadfa
+  identifier: rewasfsadfa
+  versionLabel: dsaf
+  type: Pipeline
+  projectIdentifier: GitX_Remote
+  orgIdentifier: default
+  tags: {}
+  spec:
+    stages:
+      - stage:
+          name: ewf
+          identifier: ewf
+          tags: {}
+          template:
+            templateRef: testtt_ewr
+            versionLabel: "123123"
+            templateInputs:
+              type: Approval
+              spec:
+                execution:
+                  steps:
+                    - step:
+                        identifier: sd
+                        type: HarnessApproval
+                        spec:
+                          approvers:
+                            userGroups: <+input>
