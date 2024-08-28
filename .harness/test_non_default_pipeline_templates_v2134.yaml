@@ -1,0 +1,28 @@
+template:
+  name: test non default pipeline templates
+  identifier: test_non_default_pipeline_templates
+  versionLabel: v2134
+  type: Pipeline
+  projectIdentifier: adithya_test
+  orgIdentifier: default
+  tags: {}
+  spec:
+    stages:
+      - stage:
+          name: test
+          identifier: test
+          tags: {}
+          template:
+            templateRef: test_non_default
+            versionLabel: q123123123
+            templateInputs:
+              type: Approval
+              spec:
+                execution:
+                  steps:
+                    - step:
+                        identifier: test
+                        type: HarnessApproval
+                        spec:
+                          approvers:
+                            userGroups: <+input>
