@@ -1,0 +1,25 @@
+pipeline:
+  name: testateaaer
+  identifier: testateaaer
+  projectIdentifier: GitX_Remote
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: sdf
+        identifier: sdf
+        tags: {}
+        template:
+          templateRef: stgae_delegatte
+          versionLabel: be
+          templateInputs:
+            type: Approval
+            spec:
+              execution:
+                steps:
+                  - step:
+                      identifier: dfs
+                      type: HarnessApproval
+                      spec:
+                        approvers:
+                          userGroups: <+input>
