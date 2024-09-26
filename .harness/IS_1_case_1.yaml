@@ -1,0 +1,28 @@
+inputSet:
+  name: IS 1 case 1
+  identifier: IS_1_case_1
+  orgIdentifier: default
+  projectIdentifier: AmitTest
+  pipeline:
+    identifier: parent_pipeline_case1
+    stages:
+      - stage:
+          identifier: p1
+          type: Pipeline
+          spec:
+            inputs:
+              identifier: child_pipeline_case1
+              stages:
+                - stage:
+                    identifier: s1
+                    type: Approval
+                    spec:
+                      execution:
+                        steps:
+                          - step:
+                              identifier: s1
+                              type: HarnessApproval
+                              spec:
+                                approvers:
+                                  userGroups:
+                                    - account._account_all_users
