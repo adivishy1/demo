@@ -1,0 +1,21 @@
+inputSet:
+  name: test
+  identifier: test
+  orgIdentifier: default
+  projectIdentifier: naidusanity
+  pipeline:
+    identifier: test_uplaod_file
+    stages:
+      - stage:
+          identifier: dsf
+          type: Approval
+          spec:
+            execution:
+              steps:
+                - step:
+                    identifier: fsd
+                    type: HarnessApproval
+                    spec:
+                      approvers:
+                        userGroups:
+                          - account._account_all_users
