@@ -1,0 +1,25 @@
+pipeline:
+  name: test pipipeline access
+  identifier: test_pipipeline_access
+  projectIdentifier: naidusanity
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: f
+        identifier: f
+        tags: {}
+        template:
+          templateRef: test_template_access
+          versionLabel: sd
+          templateInputs:
+            type: Approval
+            spec:
+              execution:
+                steps:
+                  - step:
+                      identifier: asd
+                      type: HarnessApproval
+                      spec:
+                        approvers:
+                          userGroups: <+input>
