@@ -1,0 +1,51 @@
+template:
+  name: dummyRemTemp
+  type: StepGroup
+  projectIdentifier: naidusanity
+  orgIdentifier: default
+  tags: {}
+  spec:
+    stageType: Custom
+    steps:
+      - step:
+          type: ShellScript
+          name: ShellScript_1
+          identifier: ShellScript_1
+          spec:
+            shell: Bash
+            executionTarget: {}
+            source:
+              type: Inline
+              spec:
+                script: |-
+                  echo "v1 -> " <+stepGroup.variables.v1> 
+                  echo "v2 -> " <+stepGroup.variables.v2> 
+                  echo "v3 -> " <+stepGroup.variables.v3> 
+            environmentVariables: []
+            outputVariables: []
+          timeout: <+stepGroup.variables.v4>
+    variables:
+      - name: v1
+        type: String
+        value: <+input>.default(var1)
+        description: ""
+        required: false
+        default: var1
+      - name: v2
+        type: String
+        value: abc
+        description: ""
+        required: false
+      - name: v3
+        type: String
+        value: <+input>
+        description: ""
+        required: false
+      - name: v4
+        type: String
+        value: <+input>.default(5m)
+        description: 5m
+        required: false
+        default: 5m
+  identifier: dummyRemTemp
+  versionLabel: v1
