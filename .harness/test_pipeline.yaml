@@ -31,3 +31,19 @@ pipeline:
                     isAutoRejectEnabled: false
                     approverInputs: []
         tags: {}
+    - stage:
+        name: s12
+        identifier: s12
+        description: ""
+        type: Custom
+        spec:
+          execution:
+            steps:
+              - stepGroup:
+                  name: s123123
+                  identifier: s123123
+                  template:
+                    templateRef: step_group_template2
+                    versionLabel: sdf23123
+                    gitBranch: aa_1master-patch
+        tags: {}
