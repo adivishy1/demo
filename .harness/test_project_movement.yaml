@@ -2,7 +2,7 @@ pipeline:
   name: test project movement
   identifier: test_project_movement
   projectIdentifier: test_adithya
-  orgIdentifier: default
+  orgIdentifier: default2
   tags: {}
   stages:
     - stage:
