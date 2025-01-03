@@ -2,7 +2,7 @@ pipeline:
   name: test project movement
   identifier: test_project_movement
   projectIdentifier: test_adithya
-  orgIdentifier: default2
+  orgIdentifier: default
   tags: {}
   stages:
     - stage:
@@ -26,8 +26,7 @@ pipeline:
                     approvers:
                       minimumCount: 1
                       disallowPipelineExecutor: false
-                      userGroups:
-                        - account._account_all_users
+                      userGroups: <+input>
                     isAutoRejectEnabled: false
                     approverInputs: []
         tags: {}
