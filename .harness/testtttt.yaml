@@ -1,0 +1,21 @@
+inputSet:
+  name: testtttt
+  identifier: testtttt
+  orgIdentifier: default
+  projectIdentifier: test_adithya
+  pipeline:
+    identifier: test_project_movement
+    stages:
+      - stage:
+          identifier: s1
+          type: Approval
+          spec:
+            execution:
+              steps:
+                - step:
+                    identifier: s11
+                    type: HarnessApproval
+                    spec:
+                      approvers:
+                        userGroups:
+                          - account._account_all_users
