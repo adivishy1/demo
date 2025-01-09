@@ -12,3 +12,7 @@ template:
           name: s1
           identifier: s1
           stages: <+input>
+      - insert:
+          name: s2
+          identifier: s2
+          stages: <+input>
