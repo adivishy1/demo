@@ -13,6 +13,6 @@ template:
           identifier: s1
           stages: <+input>
       - insert:
-          name: s2
-          identifier: s2
+          name: s3
+          identifier: s3
           stages: <+input>
