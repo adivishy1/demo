@@ -1,0 +1,37 @@
+pipeline:
+  name: bug bash  case 1 piepline
+  identifier: bug_bash_case_1_piepline
+  tags: {}
+  template:
+    templateRef: bug_bash_case1
+    versionLabel: v1
+    templateInputs:
+      stages:
+        - insert:
+            identifier: s1
+            stages:
+              - stage:
+                  name: s12
+                  identifier: s12
+                  description: ""
+                  type: Approval
+                  spec:
+                    execution:
+                      steps:
+                        - step:
+                            type: ShellScript
+                            name: ShellScript_1
+                            identifier: ShellScript_1
+                            spec:
+                              shell: Bash
+                              executionTarget: {}
+                              source:
+                                type: Inline
+                                spec:
+                                  script: echo 123
+                              environmentVariables: []
+                              outputVariables: []
+                            timeout: 10m
+                  tags: {}
+  projectIdentifier: adithya
+  orgIdentifier: default
