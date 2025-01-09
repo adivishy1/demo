@@ -1,0 +1,14 @@
+template:
+  name: bug bash case1
+  identifier: bug_bash_case1
+  versionLabel: v1
+  type: Pipeline
+  projectIdentifier: adithya
+  orgIdentifier: default
+  tags: {}
+  spec:
+    stages:
+      - insert:
+          name: s1
+          identifier: s1
+          stages: <+input>
