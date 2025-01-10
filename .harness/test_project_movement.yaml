@@ -30,3 +30,25 @@ pipeline:
                     isAutoRejectEnabled: false
                     approverInputs: []
         tags: {}
+    - stage:
+        name: sdf
+        identifier: sdf
+        description: ""
+        type: Custom
+        spec:
+          execution:
+            steps:
+              - step:
+                  type: Email
+                  name: Email_1
+                  identifier: Email_1
+                  spec:
+                    to: adi@gmail.com
+                    cc: ""
+                    subject: asdf
+                    body: |-
+                      {
+                        "key" : "value"
+                      }
+                  timeout: 10m
+        tags: {}
