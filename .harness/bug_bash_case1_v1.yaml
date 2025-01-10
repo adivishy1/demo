@@ -6,13 +6,11 @@ template:
   projectIdentifier: adithya
   orgIdentifier: default
   tags: {}
+  inputs:
+      key1: <+pipeline.stage.name>
+      key2: <+rule.name>
   spec:
-    stages:
-      - insert:
-          name: s1
-          identifier: s1
-          stages: <+input>
-      - insert:
-          name: s2
-          identifier: s2
-          stages: <+input>
+    body: |-
+      {
+        "key" : "value"
+      }
