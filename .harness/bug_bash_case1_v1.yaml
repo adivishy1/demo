@@ -1,8 +1,8 @@
 template:
-  name: bug bash case1
-  identifier: bug_bash_case1
+  name: sampleTemplate
+  identifier: sampleTemplate
   versionLabel: v1
-  type: Pipeline
+  type: NotificationTemplate
   projectIdentifier: adithya
   orgIdentifier: default
   tags: {}
