@@ -8,11 +8,18 @@ template:
   tags: {}
   spec:
     inputs:
-        key1: <+pipeline.identifier>
-        key2: <+pipeline.stage.name>
-        key3: <+rule.name>
+        key1: 
+          type: String
+          value: <+pipeline.identifier>
+        key2:
+          type: Number
+          value: <+pipeline.runSequence>
+        key3: 
+          type: String
+          value: <+rule.name>
     body: |-
       {
-        "pipelineId" : <+pipeline.identifier>,
-        "stageId" : <+inputs.key2>
+        "pipelineId" : <+inputs.key1>,
+        "runSequence" : <+inputs.key2>,
+        "notificationRuleId" : <+inputs.key3>
       }
