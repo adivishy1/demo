@@ -31,5 +31,4 @@ template:
                             strategy: <+input>
                             enforce:
                               policySets: <+input>
-              delegateSelectors: <+input>
               when: <+input>
