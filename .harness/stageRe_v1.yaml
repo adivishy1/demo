@@ -17,3 +17,8 @@ template:
               template:
                 templateRef: stepRe
                 versionLabel: v1
+                templateInputs:
+                  type: Wait
+                  spec:
+                    duration: <+input>
+                  when: <+input>
