@@ -10,3 +10,4 @@ template:
     type: Wait
     spec:
       duration: <+input>
+    when: <+input>
