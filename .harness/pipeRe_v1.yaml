@@ -31,7 +31,6 @@ template:
                             strategy: <+input>
                             enforce:
                               policySets: <+input>
-              delegateSelectors: <+input>
               when: <+input>
       - stage:
           name: restage
@@ -40,3 +39,16 @@ template:
           template:
             templateRef: stageRe
             versionLabel: v1
+            templateInputs:
+              type: Custom
+              spec:
+                execution:
+                  steps:
+                    - step:
+                        identifier: stepre
+                        template:
+                          templateInputs:
+                            type: Wait
+                            spec:
+                              duration: <+input>
+                            when: <+input>
