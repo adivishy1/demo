@@ -1,0 +1,35 @@
+template:
+  name: pipeRe
+  identifier: pipeRe
+  versionLabel: v1
+  type: Pipeline
+  projectIdentifier: DoNotDelete_ChetanTest
+  orgIdentifier: default
+  tags: {}
+  spec:
+    stages:
+      - stage:
+          name: s1
+          identifier: s1
+          tags: {}
+          template:
+            templateRef: StageTemplate
+            versionLabel: v1
+            templateInputs:
+              type: Custom
+              spec:
+                execution:
+                  steps:
+                    - step:
+                        identifier: Step_Template
+                        template:
+                          templateInputs:
+                            type: Wait
+                            spec:
+                              duration: <+input>.allowedValues(true)
+                            failureStrategies: <+input>
+                            strategy: <+input>
+                            enforce:
+                              policySets: <+input>
+              delegateSelectors: <+input>
+              when: <+input>
