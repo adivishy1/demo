@@ -33,3 +33,10 @@ template:
                               policySets: <+input>
               delegateSelectors: <+input>
               when: <+input>
+      - stage:
+          name: restage
+          identifier: restage
+          tags: {}
+          template:
+            templateRef: stageRe
+            versionLabel: v1
