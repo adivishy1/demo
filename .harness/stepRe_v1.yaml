@@ -1,0 +1,12 @@
+template:
+  name: stepRe
+  identifier: stepRe
+  versionLabel: v1
+  type: Step
+  projectIdentifier: DoNotDelete_ChetanTest
+  orgIdentifier: default
+  tags: {}
+  spec:
+    type: Wait
+    spec:
+      duration: 10m
