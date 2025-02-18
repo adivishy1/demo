@@ -1,0 +1,19 @@
+template:
+  name: stageRe
+  identifier: stageRe
+  versionLabel: v1
+  type: Stage
+  projectIdentifier: DoNotDelete_ChetanTest
+  orgIdentifier: default
+  tags: {}
+  spec:
+    type: Custom
+    spec:
+      execution:
+        steps:
+          - step:
+              name: stepre
+              identifier: stepre
+              template:
+                templateRef: stepRe
+                versionLabel: v1
