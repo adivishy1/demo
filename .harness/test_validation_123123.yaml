@@ -1,0 +1,23 @@
+pipeline:
+  name: test validation 123123
+  identifier: test_validation_123123
+  tags: {}
+  template:
+    templateRef: test_pipeline_template_valite
+    versionLabel: vw3
+    templateInputs:
+      stages:
+        - stage:
+            identifier: as
+            type: Approval
+            spec:
+              execution:
+                steps:
+                  - step:
+                      identifier: sa
+                      type: HarnessApproval
+                      spec:
+                        approvers:
+                          userGroups: <+input>
+  projectIdentifier: naidusanity
+  orgIdentifier: default
