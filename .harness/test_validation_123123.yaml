@@ -19,5 +19,9 @@ pipeline:
                       spec:
                         approvers:
                           userGroups: <+input>
+      variables:
+        - name: test
+          type: String
+          value: <+input>
   projectIdentifier: naidusanity
   orgIdentifier: default
