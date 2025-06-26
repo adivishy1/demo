@@ -1,0 +1,21 @@
+inputSet:
+  name: inputset1
+  identifier: inputset1
+  orgIdentifier: moveProject2
+  projectIdentifier: Move_Project_Demo_1
+  pipeline:
+    identifier: remote_pipeline
+    stages:
+      - stage:
+          identifier: stage1
+          type: Approval
+          spec:
+            execution:
+              steps:
+                - step:
+                    identifier: s1
+                    type: HarnessApproval
+                    spec:
+                      approvers:
+                        userGroups:
+                          - account._account_all_users
