@@ -1,0 +1,32 @@
+pipeline:
+  name: org level connector
+  identifier: org_level_connector
+  projectIdentifier: move_project
+  orgIdentifier: newOrg
+  tags: {}
+  stages:
+    - stage:
+        name: s1
+        identifier: s1
+        description: ""
+        type: Approval
+        spec:
+          execution:
+            steps:
+              - step:
+                  name: sa
+                  identifier: sa
+                  type: HarnessApproval
+                  timeout: 1d
+                  spec:
+                    approvalMessage: |-
+                      Please review the following information
+                      and approve the pipeline progression
+                    includePipelineExecutionHistory: true
+                    approvers:
+                      minimumCount: 1
+                      disallowPipelineExecutor: false
+                      userGroups: <+input>
+                    isAutoRejectEnabled: false
+                    approverInputs: []
+        tags: {}
