@@ -1,0 +1,21 @@
+inputSet:
+  name: asdfasfdsd
+  identifier: asdfasfdsd
+  orgIdentifier: default
+  projectIdentifier: test_adithya
+  pipeline:
+    identifier: test_gitx
+    stages:
+      - stage:
+          identifier: s
+          type: Approval
+          spec:
+            execution:
+              steps:
+                - step:
+                    identifier: sdf
+                    type: HarnessApproval
+                    spec:
+                      approvers:
+                        userGroups:
+                          - account._account_all_users
