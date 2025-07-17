@@ -2,7 +2,7 @@ pipeline:
   name: remote pipeline
   identifier: remote_pipeline
   projectIdentifier: move_project
-  orgIdentifier: default
+  orgIdentifier: newOrg
   tags: {}
   stages:
     - stage:
@@ -20,7 +20,7 @@ pipeline:
                   timeout: 1d
                   spec:
                     approvalMessage: |-
-                      Please review the following information
+                      Please review the following information update
                       and approve the pipeline progression
                     includePipelineExecutionHistory: true
                     approvers:
