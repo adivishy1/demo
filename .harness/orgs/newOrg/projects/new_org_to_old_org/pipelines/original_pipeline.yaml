@@ -2,7 +2,7 @@ pipeline:
   name: original pipeline
   identifier: original_pipeline
   projectIdentifier: new_org_to_old_org
-  orgIdentifier: newOrg
+  orgIdentifier: default
   tags: {}
   stages:
     - stage:
@@ -21,7 +21,7 @@ pipeline:
                   spec:
                     approvalMessage: |-
                       Please review the following information
-                      and approve the pipeline progression
+                      and approve the pipeline progression update
                     includePipelineExecutionHistory: true
                     approvers:
                       minimumCount: 1
