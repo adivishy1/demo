@@ -1,0 +1,5 @@
+service:
+  name: test123
+  identifier: test123
+  orgIdentifier: default
+  projectIdentifier: test_adithya
