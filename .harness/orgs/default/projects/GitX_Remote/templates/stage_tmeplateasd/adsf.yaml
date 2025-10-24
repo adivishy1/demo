@@ -1,0 +1,20 @@
+template:
+  name: stage tmeplateasd
+  identifier: stage_tmeplateasd
+  versionLabel: adsf
+  type: Stage
+  projectIdentifier: GitX_Remote
+  orgIdentifier: default
+  tags: {}
+  spec:
+    type: Custom
+    spec:
+      execution:
+        steps:
+          - step:
+              name: dsf
+              identifier: dsf
+              template:
+                templateRef: sadfasdfsd
+                versionLabel: asdfasdfas
+                gitBranch: master
