@@ -17,3 +17,10 @@ template:
               template:
                 templateRef: shell_script_step
                 versionLabel: sd
+                templateInputs:
+                  type: ShellScript
+                  spec:
+                    source:
+                      type: Inline
+                      spec:
+                        script: <+input>
