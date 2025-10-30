@@ -1,0 +1,21 @@
+template:
+  name: step temlaplae13
+  identifier: step_temlaplae13
+  versionLabel: sd
+  type: Step
+  projectIdentifier: move_project
+  orgIdentifier: default
+  tags: {}
+  spec:
+    timeout: 10m
+    type: ShellScript
+    spec:
+      shell: Bash
+      executionTarget: {}
+      delegateSelectors: []
+      source:
+        type: Inline
+        spec:
+          script: echo 12
+      environmentVariables: []
+      outputVariables: []
