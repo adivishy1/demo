@@ -16,6 +16,6 @@ template:
       source:
         type: Inline
         spec:
-          script: echo 12
+          script: <+input>
       environmentVariables: []
       outputVariables: []
