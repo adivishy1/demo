@@ -1,0 +1,33 @@
+template:
+  name: test-pipeline-template
+  identifier: testpipelinetemplate
+  versionLabel: v1
+  type: Pipeline
+  projectIdentifier: demoproject
+  orgIdentifier: organization1
+  tags: {}
+  spec:
+    stages:
+      - stage:
+          name: testStage
+          identifier: testStage
+          description: ""
+          type: Custom
+          spec:
+            execution:
+              steps:
+                - step:
+                    type: ShellScript
+                    name: ShellScript_1
+                    identifier: ShellScript_1
+                    spec:
+                      shell: Bash
+                      executionTarget: {}
+                      source:
+                        type: Inline
+                        spec:
+                          script: echo "test pipeline template"
+                      environmentVariables: []
+                      outputVariables: []
+                    timeout: 10m
+          tags: {}
