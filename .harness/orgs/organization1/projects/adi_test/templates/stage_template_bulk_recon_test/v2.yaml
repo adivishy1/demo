@@ -1,0 +1,20 @@
+template:
+  name: stage template bulk recon test
+  identifier: stage_template_bulk_recon_test
+  versionLabel: v2
+  type: Stage
+  projectIdentifier: adi_test
+  orgIdentifier: organization1
+  tags: {}
+  spec:
+    type: Custom
+    spec:
+      execution:
+        steps:
+          - step:
+              name: s2
+              identifier: s2
+              template:
+                templateRef: step_tempaltes_bulk
+                versionLabel: v1
+                gitBranch: main
