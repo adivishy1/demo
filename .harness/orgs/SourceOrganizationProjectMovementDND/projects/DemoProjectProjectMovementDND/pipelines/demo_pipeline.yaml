@@ -1,0 +1,25 @@
+pipeline:
+  name: demo pipeline
+  identifier: demo_pipeline
+  projectIdentifier: DemoProjectProjectMovementDND
+  orgIdentifier: SourceOrganizationProjectMovementDND
+  tags: {}
+  stages:
+    - stage:
+        name: s1
+        identifier: s1
+        tags: {}
+        template:
+          templateRef: stage_template
+          versionLabel: v1
+          templateInputs:
+            type: Approval
+            spec:
+              execution:
+                steps:
+                  - step:
+                      identifier: s1
+                      type: HarnessApproval
+                      spec:
+                        approvers:
+                          userGroups: <+input>
