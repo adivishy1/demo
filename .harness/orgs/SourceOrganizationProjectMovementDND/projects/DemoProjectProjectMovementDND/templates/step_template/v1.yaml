@@ -1,0 +1,21 @@
+template:
+  name: step template
+  identifier: step_template
+  versionLabel: v1
+  type: Step
+  projectIdentifier: DemoProjectProjectMovementDND
+  orgIdentifier: SourceOrganizationProjectMovementDND
+  tags: {}
+  spec:
+    timeout: 10m
+    type: ShellScript
+    spec:
+      shell: Bash
+      executionTarget: {}
+      delegateSelectors: []
+      source:
+        type: Inline
+        spec:
+          script: echo 123
+      environmentVariables: []
+      outputVariables: []
