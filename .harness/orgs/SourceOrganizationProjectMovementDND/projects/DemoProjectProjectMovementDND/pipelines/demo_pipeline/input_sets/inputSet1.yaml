@@ -1,0 +1,23 @@
+inputSet:
+  name: inputSet1
+  identifier: inputSet1
+  orgIdentifier: SourceOrganizationProjectMovementDND
+  projectIdentifier: DemoProjectProjectMovementDND
+  pipeline:
+    identifier: demo_pipeline
+    stages:
+      - stage:
+          identifier: s1
+          template:
+            templateInputs:
+              type: Approval
+              spec:
+                execution:
+                  steps:
+                    - step:
+                        identifier: s1
+                        type: HarnessApproval
+                        spec:
+                          approvers:
+                            userGroups:
+                              - account._account_all_users
