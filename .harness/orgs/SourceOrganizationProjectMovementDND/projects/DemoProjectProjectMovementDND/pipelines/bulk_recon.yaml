@@ -1,0 +1,22 @@
+pipeline:
+  name: bulk recon
+  identifier: bulk_recon
+  projectIdentifier: DemoProjectProjectMovementDND
+  orgIdentifier: SourceOrganizationProjectMovementDND
+  tags: {}
+  stages:
+    - stage:
+        name: s1
+        identifier: s1
+        description: ""
+        type: Custom
+        spec:
+          execution:
+            steps:
+              - step:
+                  name: s2
+                  identifier: s2
+                  template:
+                    templateRef: step_template
+                    versionLabel: v1
+        tags: {}
