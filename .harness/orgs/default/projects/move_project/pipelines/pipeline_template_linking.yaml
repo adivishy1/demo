@@ -1,0 +1,23 @@
+pipeline:
+  name: pipeline template linking
+  identifier: pipeline_template_linking
+  tags: {}
+  template:
+    templateRef: pipeline_template
+    versionLabel: v2
+    templateInputs:
+      stages:
+        - stage:
+            identifier: das
+            type: Approval
+            spec:
+              execution:
+                steps:
+                  - step:
+                      identifier: sad
+                      type: HarnessApproval
+                      spec:
+                        approvers:
+                          userGroups: <+input>
+  projectIdentifier: move_project
+  orgIdentifier: default
