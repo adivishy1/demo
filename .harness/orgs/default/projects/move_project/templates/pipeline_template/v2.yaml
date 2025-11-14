@@ -1,0 +1,35 @@
+template:
+  name: pipeline template
+  identifier: pipeline_template
+  versionLabel: v2
+  type: Pipeline
+  projectIdentifier: move_project
+  orgIdentifier: default
+  tags: {}
+  spec:
+    stages:
+      - stage:
+          name: das
+          identifier: das
+          description: ""
+          type: Approval
+          spec:
+            execution:
+              steps:
+                - step:
+                    name: sad
+                    identifier: sad
+                    type: HarnessApproval
+                    timeout: 1d
+                    spec:
+                      approvalMessage: |-
+                        Please review the following information
+                        and approve the pipeline progression
+                      includePipelineExecutionHistory: true
+                      approvers:
+                        minimumCount: 1
+                        disallowPipelineExecutor: false
+                        userGroups: <+input>
+                      isAutoRejectEnabled: false
+                      approverInputs: []
+          tags: {}
