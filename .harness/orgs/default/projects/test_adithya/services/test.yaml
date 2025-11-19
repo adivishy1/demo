@@ -3,3 +3,4 @@ service:
   identifier: test123
   orgIdentifier: default
   projectIdentifier: test_adithya
+  tags: {}
