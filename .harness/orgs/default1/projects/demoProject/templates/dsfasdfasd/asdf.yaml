@@ -1,0 +1,28 @@
+template:
+  name: dsfasdfasd
+  identifier: dsfasdfasd
+  versionLabel: asdf
+  type: Pipeline
+  projectIdentifier: demoProject
+  orgIdentifier: default1
+  tags: {}
+  spec:
+    stages:
+      - stage:
+          name: sdf
+          identifier: sdf
+          tags: {}
+          template:
+            templateRef: stage_template_bulk
+            versionLabel: da
+            templateInputs:
+              type: Approval
+              spec:
+                execution:
+                  steps:
+                    - step:
+                        identifier: as
+                        type: HarnessApproval
+                        spec:
+                          approvers:
+                            userGroups: <+input>
