@@ -1,0 +1,25 @@
+pipeline:
+  name: remote bulk test
+  identifier: remote_bulk_test
+  projectIdentifier: demoProject
+  orgIdentifier: default1
+  tags: {}
+  stages:
+    - stage:
+        name: fdc
+        identifier: fdc
+        tags: {}
+        template:
+          templateRef: stage_template_bulk
+          versionLabel: da
+          templateInputs:
+            type: Approval
+            spec:
+              execution:
+                steps:
+                  - step:
+                      identifier: as
+                      type: HarnessApproval
+                      spec:
+                        approvers:
+                          userGroups: <+input>
