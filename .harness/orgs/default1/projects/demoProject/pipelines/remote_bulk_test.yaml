@@ -1,8 +1,8 @@
 pipeline:
-  name: remote bulk test
+  name: veryLongTextveryLongTextveryLongTextveryLongTextveryLongTextveryLongTextveryLongTextveryLongText
   identifier: remote_bulk_test
   projectIdentifier: demoProject
-  orgIdentifier: default1
+  orgIdentifier: default
   tags: {}
   stages:
     - stage:
