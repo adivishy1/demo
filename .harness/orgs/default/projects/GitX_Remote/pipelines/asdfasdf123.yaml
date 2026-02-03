@@ -1,0 +1,17 @@
+pipeline:
+  name: asdfasdf123
+  identifier: asdfasdf123
+  tags: {}
+  projectIdentifier: GitX_Remote
+  orgIdentifier: default
+  stages:
+    - stage:
+        name: j
+        identifier: j
+        description: ""
+        type: Pipeline
+        spec:
+          org: default
+          pipeline: bb_on_prem_test_pipeline
+          project: GitX_Remote
+          inputs: {}
