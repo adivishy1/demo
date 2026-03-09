@@ -2,7 +2,7 @@ pipeline:
   name: test
   identifier: test
   projectIdentifier: moveProject
-  orgIdentifier: default
+  orgIdentifier: abcdef
   tags: {}
   stages:
     - stage:
