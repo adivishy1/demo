@@ -5,7 +5,6 @@ pipeline:
   template:
     templateRef: pipeline_template_defualt
     versionLabel: v1
-    gitBranch: master
     templateInputs:
       stages:
         - stage:
