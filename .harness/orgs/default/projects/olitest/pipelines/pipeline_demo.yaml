@@ -28,4 +28,18 @@ pipeline:
                         - account._account_all_users
                     isAutoRejectEnabled: false
                     approverInputs: []
+              - step:
+                  type: ShellScript
+                  name: ShellScript_1
+                  identifier: ShellScript_1
+                  spec:
+                    shell: Bash
+                    executionTarget: {}
+                    source:
+                      type: Inline
+                      spec:
+                        script: "echo \"branch: \" <+trigger.branch>"
+                    environmentVariables: []
+                    outputVariables: []
+                  timeout: 10m
         tags: {}
