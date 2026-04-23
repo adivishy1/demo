@@ -1,0 +1,26 @@
+pipeline:
+  name: pipelint stage
+  identifier: pipelint_stage
+  projectIdentifier: test_adithya
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: asd
+        identifier: asd
+        tags: {}
+        template:
+          templateRef: stage_template_defualt
+          gitBranch: master
+          versionLabel: v1
+          templateInputs:
+            type: Approval
+            spec:
+              execution:
+                steps:
+                  - step:
+                      identifier: as
+                      type: HarnessApproval
+                      spec:
+                        approvers:
+                          userGroups: <+input>
