@@ -1,0 +1,41 @@
+pipeline:
+  name: f8_p2_case2_case4
+  identifier: f8_p2_case2_case4
+  projectIdentifier: GitX_Remote
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: nd
+        identifier: nd
+        template:
+          templateRef: f8_stage2_r2_ndv
+          versionLabel: s
+          templateInputs:
+            type: Approval
+            spec:
+              execution:
+                steps:
+                  - step:
+                      identifier: as
+                      type: HarnessApproval
+                      spec:
+                        approvers:
+                          userGroups: <+input>
+    - stage:
+        name: m
+        identifier: m
+        template:
+          templateRef: f8_stage2_r1_m
+          versionLabel: v1
+          templateInputs:
+            type: Approval
+            spec:
+              execution:
+                steps:
+                  - step:
+                      identifier: asd
+                      type: HarnessApproval
+                      spec:
+                        approvers:
+                          userGroups: <+input>
