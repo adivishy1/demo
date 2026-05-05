@@ -1,0 +1,26 @@
+pipeline:
+  name: test 3
+  identifier: test_3
+  tags: {}
+  projectIdentifier: GitX_Remote
+  orgIdentifier: default
+  stages:
+    - stage:
+        name: ds
+        identifier: ds
+        tags: {}
+        template:
+          templateRef: stage_gitx_non_default
+          versionLabel: v1
+          gitBranch: a-qmaster-patch
+          templateInputs:
+            type: Approval
+            spec:
+              execution:
+                steps:
+                  - step:
+                      identifier: sd
+                      type: HarnessApproval
+                      spec:
+                        approvers:
+                          userGroups: <+input>
