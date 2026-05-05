@@ -1,0 +1,25 @@
+pipeline:
+  name: default diff repo
+  identifier: default_diff_repo
+  tags: {}
+  projectIdentifier: GitX_Remote
+  orgIdentifier: default
+  stages:
+    - stage:
+        name: fgd
+        identifier: fgd
+        tags: {}
+        template:
+          templateRef: stage_gitx_default
+          versionLabel: v1
+          templateInputs:
+            type: Approval
+            spec:
+              execution:
+                steps:
+                  - step:
+                      identifier: asfd
+                      type: HarnessApproval
+                      spec:
+                        approvers:
+                          userGroups: <+input>
