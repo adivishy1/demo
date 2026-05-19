@@ -20,6 +20,19 @@ pipeline:
                           type: HarnessApproval
                           spec:
                             approvers:
+                              minimumCount: <+input>
                               userGroups: <+input>
+        - stage:
+            identifier: dfss
+            type: Approval
+            spec:
+              execution:
+                steps:
+                  - step:
+                      identifier: sdf
+                      type: HarnessApproval
+                      spec:
+                        approvers:
+                          userGroups: <+input>
   projectIdentifier: adithya_test
   orgIdentifier: default
