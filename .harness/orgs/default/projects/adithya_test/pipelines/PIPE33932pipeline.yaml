@@ -5,6 +5,7 @@ pipeline:
   template:
     templateRef: PIPE33932pipeline
     versionLabel: v1
+    gitBranch: master
     templateInputs:
       stages:
         - stage:
