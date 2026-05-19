@@ -34,6 +34,7 @@ pipeline:
                       type: HarnessApproval
                       spec:
                         approvers:
+                          minimumCount: <+input>
                           userGroups: <+input>
   projectIdentifier: adithya_test
   orgIdentifier: default
