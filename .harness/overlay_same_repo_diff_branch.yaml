@@ -1,0 +1,9 @@
+overlayInputSet:
+  name: overlay same repo diff branch
+  identifier: overlay_same_repo_diff_branch
+  orgIdentifier: default
+  projectIdentifier: GitX_Remote
+  pipelineIdentifier: testOverlay
+  inputSetReferences:
+    - same_repo_and_branch_as_pipeline
+  tags: {}

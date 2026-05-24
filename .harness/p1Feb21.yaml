@@ -1,0 +1,23 @@
+pipeline:
+  name: p1Feb21
+  identifier: p1Feb21
+  template:
+    templateRef: pipelineTemplate
+    versionLabel: x1
+    templateInputs:
+      stages:
+        - stage:
+            identifier: asd
+            type: Approval
+            spec:
+              execution:
+                steps:
+                  - step:
+                      identifier: das
+                      type: HarnessApproval
+                      spec:
+                        approvers:
+                          userGroups: <+input>
+  tags: {}
+  projectIdentifier: AmitTest
+  orgIdentifier: default
