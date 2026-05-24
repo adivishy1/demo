@@ -1,0 +1,21 @@
+inputSet:
+  name: same repo same branch
+  identifier: same_repo_same_branch
+  orgIdentifier: default
+  projectIdentifier: GitX_Remote
+  pipeline:
+    identifier: testOverlay
+    stages:
+      - stage:
+          identifier: ads
+          type: Approval
+          spec:
+            execution:
+              steps:
+                - step:
+                    identifier: asdf
+                    type: HarnessApproval
+                    spec:
+                      approvers:
+                        userGroups:
+                          - account.testUserGroup2

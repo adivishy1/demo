@@ -1,0 +1,31 @@
+pipeline:
+  name: parentPipeline
+  identifier: parentPipeline
+  projectIdentifier: AmitTest
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: s1
+        identifier: s1
+        description: ""
+        type: Pipeline
+        spec:
+          org: default
+          pipeline: childPipeline
+          project: AmitTest
+          inputs:
+            identifier: childPipeline
+            stages:
+              - stage:
+                  identifier: asd
+                  type: Approval
+                  spec:
+                    execution:
+                      steps:
+                        - step:
+                            identifier: ad
+                            type: HarnessApproval
+                            spec:
+                              approvers:
+                                userGroups: <+input>
