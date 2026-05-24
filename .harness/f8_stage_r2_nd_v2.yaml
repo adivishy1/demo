@@ -1,0 +1,25 @@
+template:
+  name: f8_stage_r2_nd
+  identifier: f8_stage_r2_nd
+  versionLabel: v2
+  type: Stage
+  projectIdentifier: GitX_Remote
+  orgIdentifier: default
+  tags: {}
+  spec:
+    type: Custom
+    spec:
+      execution:
+        steps:
+          - step:
+              name: r2_ng
+              identifier: r2_ng
+              template:
+                templateRef: f8_step_r2_nd
+                versionLabel: v1
+          - step:
+              name: r1_m
+              identifier: r1_m
+              template:
+                templateRef: f8_step_R1_main
+                versionLabel: v1
