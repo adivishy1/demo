@@ -1,0 +1,25 @@
+pipeline:
+  name: non default 2
+  identifier: non_default_2
+  tags: {}
+  projectIdentifier: GitX_Remote
+  orgIdentifier: default
+  stages:
+    - stage:
+        name: ds
+        identifier: ds
+        tags: {}
+        template:
+          templateRef: stage_gitx_default
+          versionLabel: v1
+          templateInputs:
+            type: Approval
+            spec:
+              execution:
+                steps:
+                  - step:
+                      identifier: asfd
+                      type: HarnessApproval
+                      spec:
+                        approvers:
+                          userGroups: <+input>
