@@ -1,0 +1,26 @@
+pipeline:
+  name: remote template non dfeualt
+  identifier: remote_template_non_dfeualt
+  tags: {}
+  projectIdentifier: GitX_Remote
+  orgIdentifier: default
+  stages:
+    - stage:
+        name: sd
+        identifier: sd
+        tags: {}
+        template:
+          templateRef: stage_gitx_default
+          versionLabel: v1
+          gitBranch: master
+          templateInputs:
+            type: Approval
+            spec:
+              execution:
+                steps:
+                  - step:
+                      identifier: asfd
+                      type: HarnessApproval
+                      spec:
+                        approvers:
+                          userGroups: <+input>
