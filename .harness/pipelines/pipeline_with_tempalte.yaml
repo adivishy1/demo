@@ -1,0 +1,6 @@
+pipeline:
+  stages:
+    - name: s1
+      id: s1
+      template:
+        uses: template_remote@v1
