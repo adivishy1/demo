@@ -1,0 +1,26 @@
+pipeline:
+  name: test2234123213
+  identifier: test2234123213
+  tags: {}
+  projectIdentifier: GitX_Remote
+  orgIdentifier: default
+  stages:
+    - stage:
+        name: fds
+        identifier: fds
+        tags: {}
+        template:
+          templateRef: stage_gitx_default
+          versionLabel: v1
+          gitBranch: master
+          templateInputs:
+            type: Approval
+            spec:
+              execution:
+                steps:
+                  - step:
+                      identifier: asfd
+                      type: HarnessApproval
+                      spec:
+                        approvers:
+                          userGroups: <+input>

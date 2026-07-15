@@ -1,0 +1,7 @@
+template:
+  stage:
+    steps:
+      - name: 1w
+        run:
+          script: echo 123
+        id: w

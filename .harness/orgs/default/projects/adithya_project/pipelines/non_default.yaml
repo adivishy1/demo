@@ -1,0 +1,26 @@
+pipeline:
+  name: non default
+  identifier: non_default
+  projectIdentifier: adithya_project
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: fd
+        identifier: fd
+        tags: {}
+        template:
+          templateRef: stage_default
+          versionLabel: v1
+          gitBranch: master
+          templateInputs:
+            type: Approval
+            spec:
+              execution:
+                steps:
+                  - step:
+                      identifier: fads
+                      type: HarnessApproval
+                      spec:
+                        approvers:
+                          userGroups: <+input>
