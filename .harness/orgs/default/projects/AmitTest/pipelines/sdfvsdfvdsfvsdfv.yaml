@@ -6,7 +6,7 @@ pipeline:
   orgIdentifier: default
   stages:
     - stage:
-        name: dfs
+        name: dfsdsfs
         identifier: dfs
         tags: {}
         template:
