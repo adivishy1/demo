@@ -1,0 +1,25 @@
+pipeline:
+  name: sdfvsdfvdsfvsdfv
+  identifier: sdfvsdfvdsfvsdfv
+  tags: {}
+  projectIdentifier: AmitTest
+  orgIdentifier: default
+  stages:
+    - stage:
+        name: dfs
+        identifier: dfs
+        tags: {}
+        template:
+          templateRef: dry_run_test
+          versionLabel: v1
+          templateInputs:
+            type: Approval
+            spec:
+              execution:
+                steps:
+                  - step:
+                      identifier: asd
+                      type: HarnessApproval
+                      spec:
+                        approvers:
+                          userGroups: <+input>
