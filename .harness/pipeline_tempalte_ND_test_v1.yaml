@@ -1,0 +1,28 @@
+template:
+  name: pipeline tempalte ND test
+  identifier: pipeline_tempalte_ND_test
+  versionLabel: v1
+  type: Pipeline
+  projectIdentifier: naidusanity
+  orgIdentifier: default
+  tags: {}
+  spec:
+    stages:
+      - stage:
+          name: s2
+          identifier: s2
+          template:
+            templateRef: stage_template_ND_test123123
+            versionLabel: v1
+            templateInputs:
+              type: Approval
+              spec:
+                execution:
+                  steps:
+                    - step:
+                        identifier: dsaf
+                        type: HarnessApproval
+                        spec:
+                          approvers:
+                            minimumCount: <+input>
+                            userGroups: <+input>
