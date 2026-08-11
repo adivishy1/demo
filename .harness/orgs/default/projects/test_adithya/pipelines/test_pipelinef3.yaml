@@ -1,0 +1,14 @@
+pipeline:
+  name: test pipelinef3
+  identifier: test_pipelinef3
+  projectIdentifier: test_adithya
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: fds
+        identifier: fds
+        tags: {}
+        template:
+          templateRef: stage_tempalte_deletion
+          versionLabel: v1

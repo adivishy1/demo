@@ -1,0 +1,26 @@
+pipeline:
+  name: non default
+  identifier: non_default
+  projectIdentifier: AmitTest
+  orgIdentifier: Pipelines_NonK8s_Org_NG
+  tags: {}
+  stages:
+    - stage:
+        name: fd
+        identifier: fd
+        tags: {}
+        template:
+          templateRef: stage_default
+          versionLabel: b3
+          gitBranch: master
+          templateInputs:
+            type: Approval
+            spec:
+              execution:
+                steps:
+                  - step:
+                      identifier: sfd
+                      type: HarnessApproval
+                      spec:
+                        approvers:
+                          userGroups: <+input>
