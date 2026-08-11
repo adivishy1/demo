@@ -19,9 +19,16 @@ template:
                 versionLabel: v1
                 templateInputs:
                   type: ShellScript
-                  timeout: <+input>
                   spec:
+                    executionTarget: <+input>
                     source:
                       type: Inline
                       spec:
                         script: <+input>
+                    environmentVariables:
+                      - name: var1
+                        type: String
+                        value: <+input>
+                    includeInfraSelectors: <+input>
+                    outputAlias:
+                      key: <+input>
