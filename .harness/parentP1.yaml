@@ -1,0 +1,31 @@
+pipeline:
+  name: parentP1
+  identifier: parentP1
+  projectIdentifier: GitX_Remote
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: sd
+        identifier: sd
+        description: ""
+        type: Pipeline
+        spec:
+          org: default
+          pipeline: childP1
+          project: GitX_Remote
+          inputs:
+            identifier: childP1
+            stages:
+              - stage:
+                  identifier: asd
+                  type: Approval
+                  spec:
+                    execution:
+                      steps:
+                        - step:
+                            identifier: asd
+                            type: HarnessApproval
+                            spec:
+                              approvers:
+                                userGroups: <+input>
