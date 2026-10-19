@@ -1,0 +1,24 @@
+pipeline:
+  name: pipelint d
+  identifier: pipelint_d
+  tags: {}
+  template:
+    templateRef: pipeline_template_defualt
+    versionLabel: v1
+    gitBranch: master
+    templateInputs:
+      stages:
+        - stage:
+            identifier: sfd
+            type: Approval
+            spec:
+              execution:
+                steps:
+                  - step:
+                      identifier: fsd
+                      type: HarnessApproval
+                      spec:
+                        approvers:
+                          userGroups: <+input>
+  projectIdentifier: test_adithya
+  orgIdentifier: default
