@@ -1,0 +1,15 @@
+pipeline:
+  name: PIPE-38648
+  identifier: PIPE38648
+  projectIdentifier: adithya_test
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: cvx
+        identifier: cvx
+        tags: {}
+        template:
+          templateRef: PIPE38648
+          versionLabel: s
+          gitBranch: master
