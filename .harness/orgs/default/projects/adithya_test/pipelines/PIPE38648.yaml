@@ -13,3 +13,14 @@ pipeline:
           templateRef: PIPE38648
           versionLabel: s
           gitBranch: master
+          templateInputs:
+            type: Approval
+            spec:
+              execution:
+                steps:
+                  - step:
+                      identifier: das
+                      type: HarnessApproval
+                      spec:
+                        approvers:
+                          userGroups: <+input>
