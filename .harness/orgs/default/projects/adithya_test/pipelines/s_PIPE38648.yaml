@@ -20,6 +20,7 @@ pipeline:
                           type: HarnessApproval
                           timeout: <+input>
                           spec:
+                            approvalMessage: <+input>
                             approvers:
                               userGroups: <+input>
   projectIdentifier: adithya_test
