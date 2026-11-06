@@ -18,7 +18,6 @@ pipeline:
                       - step:
                           identifier: das
                           type: HarnessApproval
-                          timeout: <+input>
                           spec:
                             approvalMessage: <+input>
                             approvers:
