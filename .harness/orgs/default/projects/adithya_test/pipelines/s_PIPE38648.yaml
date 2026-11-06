@@ -16,7 +16,7 @@ pipeline:
                   execution:
                     steps:
                       - step:
-                          identifier: das
+                          identifier: dasdfgdfgdfg
                           type: HarnessApproval
                           spec:
                             approvalMessage: <+input>
