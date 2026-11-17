@@ -1,0 +1,26 @@
+inputSet:
+  name: dsf
+  identifier: dsf
+  orgIdentifier: default
+  projectIdentifier: adithya_test
+  pipeline:
+    identifier: s_PIPE38648
+    template:
+      templateInputs:
+        stages:
+          - stage:
+              identifier: f
+              template:
+                templateInputs:
+                  type: Approval
+                  spec:
+                    execution:
+                      steps:
+                        - step:
+                            identifier: das
+                            type: HarnessApproval
+                            spec:
+                              approvalMessage: asdf
+                              approvers:
+                                userGroups:
+                                  - _project_all_users
